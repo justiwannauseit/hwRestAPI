@@ -13,6 +13,7 @@ import java.io.IOException;
 public class TestOnlyMethodGet {
 
     private static PetStore petStore;
+    private static final int ID = 999999999;
 
     @BeforeAll
     public static void beforeAll() {
@@ -25,9 +26,8 @@ public class TestOnlyMethodGet {
         Pet myPet = new Pet();
         Category categoryMyPet = new Category();
 
-        myPet.setId(8800);
+        myPet.setId(ID);
         myPet.setName("Vasiliy");
-        categoryMyPet.setId(5553535);
         categoryMyPet.setName("Wild");
         myPet.setCategory(categoryMyPet);
         myPet.setStatus("sold");
@@ -39,7 +39,7 @@ public class TestOnlyMethodGet {
 
     @Test
     public void getNonExistentPet() throws IOException {
-        final int ID = 999999999;
+        petStore.deletePet(ID).execute();
         Assertions.assertEquals(404, petStore.getPetById(ID).execute().code());
     }
 

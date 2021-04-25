@@ -23,7 +23,6 @@ public class TestOnlyMethodPut {
 
         myPet.setId(88526);
         myPet.setName("IvanGuy");
-        categoryMyPet.setId(565454654);
         categoryMyPet.setName("Wild");
         myPet.setCategory(categoryMyPet);
         myPet.setStatus("sold");

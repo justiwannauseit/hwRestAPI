@@ -28,7 +28,6 @@ public class TestOnlyMethodDelete {
 
         myPet.setId(PET_ID);
         myPet.setName("Ivan");
-        categoryMyPet.setId(565454654);
         categoryMyPet.setName("Wild");
         myPet.setCategory(categoryMyPet);
         myPet.setStatus("sold");

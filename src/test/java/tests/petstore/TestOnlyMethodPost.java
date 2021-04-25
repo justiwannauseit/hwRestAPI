@@ -26,7 +26,6 @@ public class TestOnlyMethodPost {
 
         myPet.setId(1000);
         myPet.setName("Vasiliy");
-        categoryMyPet.setId(589);
         categoryMyPet.setName("Wild");
         myPet.setCategory(categoryMyPet);
         myPet.setStatus("sold");
